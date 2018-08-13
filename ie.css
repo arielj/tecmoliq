@@ -1,0 +1,11 @@
+h1 {
+ top: -20px;
+}
+
+body {
+  overflow: hidden;
+}
+
+.text-contacto {
+  width: 300px;
+}

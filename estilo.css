@@ -1,0 +1,222 @@
+body {
+  background: #000;
+  color: #fff;
+  font-family: 'Arial';
+  font-size: 14px;
+  overflow: scroll;
+}
+
+.clear {
+  clear: both;
+}
+
+.right {
+  float: right;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a img {
+  border: 0px;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+#wrapper {
+  width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#logo {
+  padding: 15px 0px 10px 0px;
+}
+
+#logo a {
+  color: #ff0000;
+  font-size: 70px;
+  font-weight: bold;
+}
+
+#languages {
+  position: absolute;
+  right: 10px;
+}
+
+#div-atom {
+  float: right;
+  margin-top: 20px;
+}
+
+#barra {
+  text-align: right;
+  color: #ff0000;
+  font-weight: bold;
+  padding-right: 5px;
+  padding-bottom: 5px;
+}
+
+#barra a {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+#barra a:hover {
+  color: #ff0000;
+}
+
+#barraBombas a:hover {
+  color: #f00;
+}
+
+#separador {
+  padding: 10px 0px;
+}
+
+#slide {
+  float: right;
+  width: 130px;
+  position: relative;
+  height: 320px;
+  overflow: hidden;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+#slide #img1 {
+  position: absolute;
+}
+
+#content {
+  padding: 20px;
+}
+
+#footer {
+  padding: 20px;
+  font-size: 12px;
+}
+
+#footer #webmaster {
+  float: left;
+}
+
+#footer, #footer a {
+  color: #444;
+}
+
+#footer #copyright {
+  float: right;
+}
+
+#webmaster, #copyright {
+  padding-top: 5px;
+}
+
+#div-previa {
+  text-align: center;
+  padding: 20px;
+}
+
+#previa {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -moz-opacity: 0.0;
+  -khtml-opacity: 0.0;
+  opacity: 0.0;
+}
+
+.text {
+  text-align: justify;
+  width: 670px;
+  line-height: 130%;
+  margin: 0px 30px;
+}
+
+.text-llavelateral, .text-llavecorte, .text-accesorios {
+  width: 590px;
+}
+
+.text-opcionales {
+  width: 500px;
+  margin: 30px auto;
+}
+
+.text-contacto {
+  font-size: 17px;
+}
+
+.text-aero100, .text-aero165 {
+  width: 550px;
+}
+
+.text-aero160 {
+  width: 800px;
+}
+
+.text-geo160, .text-aero160mh {
+  width: 600px;
+}
+
+#mapa {
+  width: 450px;
+  height: 335px;
+  border: 1px solid #f00;
+}
+
+#barraBombas {
+  text-align: right;
+  margin-top: -15px;
+  color: #f00;
+  font-size: 22px;
+}
+
+#bomba .right {
+  margin-top: 10px;
+}
+
+/*Intro*/
+body.intro {
+  overflow: hidden;
+  height: 99%;
+}
+
+#intro {
+  position: relative;
+}
+
+#avion #imagen img {
+  height: 50px;
+}
+
+#avion {
+  width: 968px;
+  top: 100px;
+  margin: 0 auto;
+}
+
+#avion #logo {
+  position: absolute;
+  left: 350px;
+  top: 160px;
+  font-size: 100px;
+  color: #f00;
+  font-weight: bold;
+}
+
+#entrar {
+  position: absolute;
+  left: 470px;
+  top: 450px;
+  background: #000;
+  padding: 15px;
+  font-size: 22px;
+}
