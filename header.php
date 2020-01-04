@@ -12,7 +12,7 @@
   <?php if (isset($scripts)) { ?>
       <script type="text/javascript" src="<?php echo $scripts; ?>"></script>
   <?php  } ?>
-  <script type="text/javascript" src="scripts.js?_v=1"></script>
+  <script type="text/javascript" src="scripts_old.js?_v=1"></script>
   <link rel="shortcut icon" href='img/favicon.ico' />
 	<meta name='description' content="TecMoLiq es una empresa argentina con una experiencia personal de 27 años en el rubro de Bombas de uso industrial, dedicándose desde el año 1992 a la fabricación de accesorios para equipos de rociado en la Aviación Agrícola." />
 	<meta name="keywords" content="bombas industriales atomizadores rotativos valvulas pawnee bravo ag-wagon picos transland helice terrestre paso variable aero" />

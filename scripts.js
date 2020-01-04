@@ -1,89 +1,42 @@
-$(document).ready(function() {
-  $("#previa").load(function() {
-    $(this).fadeTo("normal", 1.0);
-  });
+document.addEventListener('DOMContentLoaded', function() {
+  if (location.search.match(/lang=en/))
+    document.body.classList.add('english');
 
-  moverSlide();
-
-  if ($('#previa').length) {
-    $('#barra a').each(function(index, element){
-      $(element).mouseover(function() {
-        id = $(this).attr('id');
-        if (id && id != '') cambiarPrevia('pre-'+id+'.jpg');
-      });
-
-      $(element).mouseout(function() {
-        cambiarPrevia('');
-      });
-    });
-  }
-
-  if ($(this).attr('title') == 'TecMoLiq.com.ar') {
-    //Intro
-    setTimeout(function(){
-      $("#avion #imagen img").animate({
-        height: "400px"
-      }, 3000, function(){
-        $("#avion #imagen img").animate({
-          height: "850px"
-        }, 3000);
-      });
-    },300);
-  }
-
-  if ($(this).attr('title').search('Contáctenos') != -1 || $(this).attr('title').search('Contact Us') != -1) {
-    init_map();
-  }
+  bindPumps();
+  initMap();
 })
 
-function moverSlide(){
-  $('#img1').animate({top: '-=528px'}, 5000, function() {
-    $('#img1').css({top:'0px'});
-    moverSlide();}
-  );
-}
+function initMap() {
+  this.mymap = L.map('map').setView([-34.71714803840951, -58.30205535624998], 14);
+  this.startZoom = 9;
 
-function cambiarPrevia(archivo){
-  pre = $('#previa');
-  $("#previa").stop()
-  if (this.location.href.match(/\/eng\//) != null) {
-    archivo = "/img/"+archivo;
-  } else {
-    archivo = "/img/"+archivo;
-  }
-  if (pre) {
-    if (archivo != "/img/") {
-      if ($('#previa').attr("src") != archivo) {
-        var imagen = new Image();
-        imagen.src = archivo;
-        $("#previa").stop().fadeTo("fast", 0.0, function() {
-          $("#previa").attr("src", archivo);}
-        );
-      };
-    } else {
-      $("#previa").stop().fadeTo("fast", 0.0);
-    }
-  }
-}
-
-var startZoom = 9;
-var map;
-var marker = false;
-
-//Crea el mapa vacio
-var mymap = false
-function init_map() {
-  mymap = L.map('mapa').setView([-34.71714803840951, -58.30205535624998], 14);
   L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
       subdomains: ['a','b','c']
-  }).addTo(mymap)
+  }).addTo(this.mymap)
 
-  var marker = L.marker([-34.71714803840951, -58.30205535624998]).addTo(mymap);
+  this.marker = L.marker([-34.71714803840951, -58.30205535624998]).addTo(this.mymap);
 
-  mymap.flyTo(marker.getLatLng(), 14);
+  this.mymap.flyTo(marker.getLatLng(), 14);
 }
 
-function centerMarker(id){
-  mymap.setView(marker.getLatLng(), 14);
+
+function bindPumps() {
+  this.wrapper = document.getElementById('pumps');
+  this.pumps = this.wrapper.querySelectorAll('.product');
+
+  this.showPump = id => {
+    this.pumps.forEach( el => {
+      el.classList.remove('current');
+    })
+
+    document.getElementById(id).classList.add('current');
+  }
+
+  this.wrapper.querySelectorAll('.nav button').forEach( btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      this.showPump(e.target.dataset.id);
+    })
+  })
 }

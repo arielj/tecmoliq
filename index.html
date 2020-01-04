@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name='author' content='Ariel Juodziukynas' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='description' content="TecMoLiq es una empresa argentina con una experiencia personal de más de 40 años en el rubro de Bombas de uso industrial, dedicándose desde el año 1992 a la fabricación de accesorios para equipos de rociado en la Aviación Agrícola." />
+    <meta name="keywords" content="bombas industriales atomizadores rotativos valvulas pawnee bravo ag-wagon picos transland helice terrestre paso variable aero" />
+
+    <title>TecMoLiq</title>
+    <link rel='shortcut icon' href='./img/favicon.ico' />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+          integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+          integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+          crossorigin=""></script>
+
+    <link rel="stylesheet" href='./styles.css' />
+    <script src='./scripts.js'></script>
+  </head>
+  <body>
+    <div class='wrapper'>
+      <header id='top'>
+        <div id='languages'>
+          <a href='?lang=es'><img src='./img/arg.jpg' alt='español' /></a>
+          |
+          <a href='?lang=en'><img src='./img/eeuu.jpg' alt='english' /></a>
+        </div>
+        <span id='logo_tec'>TecMoLiq</span>
+        <a id='logo_atom' href='http://www.atomizadoresarg.com.ar'><img src='./img/atomizadores.jpg' alt='Logo Atomizadores Argentinos'></a>
+      </header>
+
+      <nav>
+        <a href='#home'>home</a> -
+        <a href='#pumps'><span data-lang='es'>bombas</span><span data-lang='en'>pumps</span></a> -
+        <a href='#lateral_load_valves'><span data-lang='es'>llaves de carga lateral</span><span data-lang='en'>lateral load valves</span></a> -
+        <a href='#cut_valves'><span data-lang='es'>llaves de corte</span><span data-lang='en'>cut valves</span></a> -
+        <a href='#accesories'><span data-lang='es'>accesorios</span><span data-lang='en'>accessories</span></a> -
+        <a href='#optionals'><span data-lang='es'>opcionales</span><span data-lang='en'>optionals</span></a> -
+        <a href='#contact_us'><span data-lang='es'>contactanos</span><span data-lang='en'>contact us</span></a>
+      </nav>
+    
+      <section id='home'>
+        <p data-lang='es'>
+          <b>TecMoLiq</b> es una empresa argentina con una experiencia personal de más de 40 años
+          en el rubro de Bombas de uso industrial, dedicándose desde el año 1992 a la fabricación de
+          accesorios para equipos de rociado en la Aviación Agrícola. Contamos actualmente con
+          una variedad de modelos que permiten cubrir las necesidades de los aviones específicos
+          y adaptados con que cuenta el mercado, sin dejar de pensar en estar permanentemente
+          incorporando proyectos que satisfagan la necesidad de los usuarios.
+        </p>
+        <p data-lang='en'>
+          <b>TecMoLiq</b> is a company with more than 40 years of personal experience on Pumps
+          for industrial ussage, focused since 1992 on the production of accesories for the
+          Agricultural Aviation. Currently whe count with a variety of models that covers the
+          needs of specific and adapted planes on the market, but constantly introducing proyects
+          to satisfy the user's needs.
+        </p>
+      </section>
+  
+
+
+
+      <section id='pumps'>
+        <div class='nav'>
+          <button data-id='aero-160'>Aero-160</button> -
+          <button data-id='aero-100'>Aero-100</button> -
+          <button data-id='aero-160mh'>Aero-160MH</button> -
+          <button data-id='aero-165'>Aero-165</button> -
+          <button data-id='geo-160'>Geo-160</button>
+        </div>
+
+        <div id='products'>
+          <div class='product current' id='aero-160'>
+            <h2>Aero-160</h2>
+
+            <div class='images'>
+              <img alt="Aero-160" src="./img/aero160.jpg" />
+            </div>
+
+            <p data-lang='en'>
+              Maximum pressure: 60 libs/inch2.<br />
+              Electro-magnetic (12V or 24V) or mechanical break.<br />
+              Stainless steel, viton, carbon and ceramic mechanical seal.<br />
+              Body-independant bering's support<br />
+              <br />
+              Total weight: 6,5 Kg<br />
+              <br />
+              <br />
+              <br />
+              The <b>Aero-160</b> models, on it's different versions, can be
+              installed on specific planes for agricultural aplication.<br />
+              <br />
+              The design gives total independency between the bearing's support
+              and the body of the pump, allowing to unmount only the elements that
+              require maintenance with only 4 screws without uncoupling any pipe.<br />
+              <br />
+              Break can be electro-magnetic (12V or 24V), or mechanic.<br />
+              <br />
+              The mechanical seal is build with materials suitable to be in contact
+              with agrochemical products and can be fully replaces without unmounting
+              the axis or the break.<br />
+              <br />
+              The standard production is built in aluminium, but can also be built on
+              bronce or stainless steel.
+            </p>
+            <p data-lang='es'>
+              Presión máxima: 60 libs/pulg2.<br />
+              Freno electromagnético (12V o 24V) o mecánico.<br />
+              Sello mecánico de acero inoxidable, vitón, carbón y cerámica.<br />
+              Soporte de rodamientos independiente del cuerpo de la bomba<br />
+              <br />
+              Peso total: 6,5 Kg<br />
+              <br />
+              <br />
+              <br />
+              El modelo <b>Aero-160</b>, en sus distintas versiones, es apto para ser instalado
+              en aviones específicos para aplicación agrícola.<br />
+              <br />
+              El diseño otorga total independencia entre el soporte de rodamiento y el
+              cuerpo de bomba, permitiendo desmontar los elementos que requieran
+              mantenimiento con sacar solamente cuatro tuercas, sin necesidad de
+              desacoplar las cañerías.<br />
+              <br />
+              El freno puede ser electromagnético de 12V o 24V, o mecánico.<br />
+              <br />
+              El sello mecánico está fabricado en materiales aptos para el contacto con
+              productos agroquímicos y se puede reemplazar totalmente sin tener que
+              desmontar el eje y el freno.<br />
+              <br />
+              Su construcción standard es en aluminio, pudiéndose fabricar también en
+              bronce o en acero inoxidable.
+            </p>
+          </div>
+
+          <div class='product' id='aero-100'>
+            <h2>Aero-100</h2>
+
+            <div class='images'>
+              <img alt="Aero-100" src="./img/aero100.jpg" />
+            </div>
+
+            <p data-lang='en'>
+              The <b>Aero-100</b> model was designed to be installed on non-specific planes,
+              and, because it's dimensions, it's used for the application of volumes no bigger
+              than 15 Lts./Hect.<br />
+              <br />
+              Due to it's low weight (~4,7Kg.) and volume, it's also used on specific planes
+              where it leaves a more aerodynamic profile and make it more efficient.
+            </p>
+            <p data-lang='es'>
+              El modelo <b>Aero-100</b> fue diseñado para ser instalado en aviones no
+              específicos, y por sus dimensiones es utilizada para la aplicación de
+              volúmenes no mayores a 15 Lts./Hect.<br />
+              <br />
+              Por su bajo peso (aproximadamente 4,7Kg.) y su poco volumen, es utilizada
+              en aviones específicos en los que se pretende dejar un perfil más
+              aerodinámico y, por lo tanto, más eficiente.
+            </p>
+          </div>
+
+          <div class='product' id='aero-160mh'>
+            <h2>Aero-160MH</h2>
+
+            <div class='images'>
+              <img alt="Aero-160MH" src="./img/aero160mh.jpg" />
+            </div>
+
+            <p data-lang='en'>
+              Exclusive for equipment provided with hydraulic systems.<br />
+              As of any <b>TecMoLiq</b> model, mount dimensions are compatible
+              with the original equipment.
+            </p>
+            <p data-lang='es'>
+              Exclusivamente para el montaje en los equipos provistos de sistema hidráulico.
+              Como en todos los modelos <b>TecMoLiq</b>, las dimensiones del montaje son
+              compatibles con los equipos originales.
+            </p>
+          </div>
+
+          <div class='product' id='aero-165'>
+            <h2>Aero-165</h2>
+
+            <div class='images'>
+              <img alt="Aero-165" src="./img/aero165.jpg" />
+            </div>
+
+            <p data-lang='en'>
+              This model was designed to be installed on specific large-sized aircraft.
+              It has different versions to be adapted to the mount dimensions o the turbo
+              prop and radial aircrafts in the market.<br />
+              <br />
+              Break can be mechanic or 12/24V electro-magnetic. It can also be provided
+              with a variable pitch propeller.
+            </p>
+            <p data-lang='es'>
+              Este modelo fue pensado para ser instalado en aviones específicos de gran
+              porte. Tiene versiones que se adaptan a las dimensiones de montaje de
+              las aeronaves turbo hélice y radiales del mercado.<br />
+              <br />
+              El freno puede ser mecánico o electromagnético de 12V o 24V. Se puede
+              proveer con hélice de paso variable.
+            </p>
+          </div>
+
+          <div class='product' id='geo-160'>
+            <h2>Geo-160</h2>
+
+            <div class='images'>
+              <img alt="Geo-160" src="./img/geo1601.jpg" />
+              <img alt="Geo-160" src="./img/geo1602.jpg" />
+            </div>
+
+            <p data-lang='en'>
+              The <b>Geo-160</b> model is a centriugal pump used on land autopropelled
+              equipment. The transmission is made through an electro-magnetic clutch
+              with incorporated pulley. The work regime ranges between 3000 and 4200
+              RPM depending on the pressure and volume needed for each job.<br />
+              <br />
+              Standard production is build in aluminium, stainless steel axis and mechanical
+              seal made of stainless steel, vitón, graphte and ceramic. It can be built with
+              all components that are in contact with the spraied product in stainless steel
+              or bronze if spraying fertilizer.
+            </p>
+            <p data-lang='es'>
+              El modelo <b>Geo-160</b> es una bomba centrífuga que por su concepción es
+              utilizada en equipos de pulverización terrestre autopropulsados. La
+              transmisión se realiza a través de un embrague electromagnético con
+              polea incorporada. El régimen de trabajo oscilaría entre 3000 y 4200
+              RPM según la presión y caudal necesarios para el trabajo.<br />
+              <br />
+              La construcción es de aluminio, eje de acero inoxidable y sello mecánico
+              de acero inoxidable, vitón, grafito y cerámica, en el caso de la utilización
+              de fertilizantes, se puede construir con todos los componentes en contacto
+              con el producto en acero inoxidable o bronce.
+            </p>
+          </div>
+        </div>
+      </section>
+ 
+
+
+
+      <section id='lateral_load_valves' class='shared_style'>
+        <h1>
+          <span data-lang='es'>Llaves de carga lateral</span><span data-lang='en'>Lateral load valves</span>
+        </h1>
+
+        <div class='images'>
+          <img src="./img/llaves-de-cargaA.jpg" alt="cargaA" />
+          <img src="./img/llaves-de-cargaB.jpg" alt="cargaB" />
+        </div>
+
+        <p data-lang='es'>
+          Las llaves de carga lateral <b>TecMoLiq</b> tienen las dimensiones de montaje de todos
+          los aviones específicos de aeroaplicación agrícola.<br />
+          <br />
+          La construcción standard se fabrica en 2" con 1/2 acople macho y el cuerpo de aliminio
+          con la esfera de acero inoxidable.
+        </p>
+
+        <p data-lang='en'>
+          <b>TecMoLiq</b>'s lateral load valves have the mount dimensions of specific planes for
+          agricultural aeroapplication.<br />
+          <br />
+          Standard production is built on 2" with 1/2" male coupling, aluminium body and stainless
+          steel sphere.
+        </p>
+      </section>
+
+      <section id='cut_valves' class='shared_style'>
+        <h1>
+          <span data-lang='es'>Llaves de corte</span><span data-lang='en'>Cut valves</span>
+        </h1>
+
+        <div class='images'>
+          <img src="./img/ll-de-corte1.jpg" alt="corteA" />
+          <img src="./img/ll-de-corte2.jpg" alt="corteB" />
+        </div>
+
+        <p data-lang='es'>
+          Las Llaves de corte <b>TecMoLiq</b> se construyen en versiones de 1 1/2" y 2", con
+          dimensiones exteriores de montaje compatibles con las distintas aeronaves específicas
+          de aplicación agrícola.<br />
+          <br />
+          La construcción estandard se realiza en aluminio, pudiéndose construir en bronce o en
+          acero inoxidable.<br />
+          <br />
+          Independientemente del material de la válvula, la esfera es de acero inoxidable pulido,
+          guarniciones de teflón y o'rings de vitón. El eje del comando es de acero inoxidable y
+          trabaja sobre un buje de bronce lubricado con grasa por medio de un alemite.
+        </p>
+
+        <p data-lang='en'>
+          <b>TecMoLiq</b>'s cut valves are built in 1 1/2" y 2" versions, with exterior mount
+          dimensions compatible with the different specific planes for agricultural aviation.<br />
+          <br />
+          The standard build is made in aluminium, but can also be built in bronce o stainless steel.<br />
+          <br />
+          Independantly of the valve's material, the sphere is made in polished stainless steel,
+          teflon saels and viton o'rings. The axis if the command is made in stainless steel and works
+          on a bronze bushing with grease lubricated through an Alemite.
+        </p>
+      </section>
+
+      <section id='accesories' class='shared_style'>
+        <h1>
+          <span data-lang='es'>Hélice de paso variable</span><span data-lang='en'>Variable pitch propeller</span>
+        </h1>
+
+        <div class='images'>
+          <img src="./img/helice.jpg" alt="Hélice de paso variable" />
+        </div>
+
+        <p data-lang='es'>
+          Esta hélice puede ser montada en cualquier modelo de bomba <b>TecMoLiq</b>, mejorando
+          notablemente el rendimiento de las mismas, o regulándolas para que estas no trabajen
+          exijidas si el trabajo no lo requiere. Se fabrican dos modelos donde el paso se varía
+          en forma independiente en cada paleta o donde el paso se varía en forma sincronizada a
+          través de un mando en el cono de la misma.
+        </p>
+
+        <p data-lang='en'>
+          This propeller can be mounted on any <b>TecMoLiq</b> pump model, notablly enhancing
+          it's performance, or adjusting it so the pump does not do more work than the required.
+          There are two models where the pitch can be set different on each palete or all paletes
+          moves synchronized.
+        </p>
+      </section>
+
+      <section id='optionals'>
+        <h1>
+          <span data-lang='es'>Construcciones especiales</span><span data-lang='en'>Special constructions</span>
+        </h1>
+
+        <p data-lang='es'>
+          Si bien los productos ofrecidos son compatibles con las dimensiones de los equipos
+          originales, a los mismos se les puede realizar modificaciones para ser adaptados a
+          cada caso particular, o bien, la construcción de estos en acero inoxidable o bronce.
+        </p>
+
+        <p data-lang='en'>
+          Even though the offered products are compatible with the dimensions of the original
+          equipment, they can be modified to be adapted to any particular case, or, they can be
+          built with stainless steel or bronce.
+        </p>
+      </section>
+  
+      <section id='contact_us'>
+        <h1>
+          <span data-lang='es'>Contactanos</span><span data-lang='en'>Contact Us</span>
+        </h1>
+    
+        <div id='info'>
+          E-mail: tecmoliq@gmail.com
+          <br />
+          <br />
+          Tel: (054-011) 4252-6208
+          <br />
+          <br />
+          Comandante Franco 1133
+          <br />
+          Bernal Oeste (CP: 1876)
+          <br />
+          Buenos Aires, Argentina
+        </div>
+
+        <div id='map'>
+          Mapa
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <span><span data-lang='es'>Desarrollador</span><span data-lang='en'>Developer</span>: Ariel Juodziukynas</span>
+      <span id='copyright'>&copy; TecMoLiq</span>
+    </footer>
+    <a href='#top' id='back_to_top'>«</a>
+  </body>
+</html>

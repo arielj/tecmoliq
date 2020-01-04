@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  font-size: 1.2rem;
+}
+body.english [data-lang=es] {
+  display: none;
+}
+body:not(.english) [data-lang=en] {
+  display: none;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#back_to_top {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: #777;
+  padding: .5rem;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50%;
+  font-size: 2rem;
+  line-height: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  opacity: 0.7;
+  text-align: center;
+  transform: rotate(90deg);
+  z-index: 500;
+}
+#back_to_top:hover {
+  opacity: 1;
+}
+header, .wrapper, footer {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+}
+#languages {
+  text-align: right;
+}
+#logo_tec {
+  color: #ff0000;
+  font-size: 70px;
+  font-weight: bold;
+}
+#logo_atom {
+  float: right;
+}
+nav {
+  padding: .7rem 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  color: red;
+  background: black;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  padding: 0 .5rem;
+}
+nav a:hover, nav a:focus {
+  color: red;
+}
+h1 {
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+footer {
+  color: #888;
+  padding: .5rem;
+}
+footer #copyright {
+  float: right;
+} 
+section {
+  min-height: 50vh;
+  padding: 4rem 1rem;
+}
+section, nav {
+  background-image: url('./img/separador.jpg');
+  background-position: bottom;
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 600px) {
+  header {
+    text-align: center;
+  }
+  #logo_atom {
+    display: none;
+  }
+  nav {
+    position: static;
+  }
+  h1, h2 {
+    text-align: center;
+  }
+}
+
+/* CONTACTO */
+
+#contact_us {
+  display: grid;
+  grid-template-areas: 'title title' 'info map';
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 1rem;
+  grid-template-rows: min-content 1fr;
+}
+#contact_us h1 {
+  grid-area: title;
+}
+#info {
+  grid-area: info;
+}
+#map {
+  grid-area: map;
+  border: 1px solid red;
+}
+@media screen and (max-width: 800px) {
+  #contact_us {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #contact_us {
+    grid-template-areas: 'title' 'info' 'map';
+    grid-template-columns: 1fr;
+  }
+  #map {
+    height: 200px;
+  }
+}
+
+/* /CONTACTO */
+
+
+/* lateral, cut, accessories */
+.shared_style {
+  display: grid;
+  grid-template-areas: 'title title' 'text images';
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: min-content 1fr;
+}
+.shared_style h1 {
+  grid-area: title;
+}
+.shared_style p {
+  grid-area: text;
+  padding: 4rem;
+}
+.shared_style .images {
+  grid-area: images;
+}
+@media screen and (max-width: 700px) {
+  .shared_style p {
+    padding: 2rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .shared_style {
+    display: block;
+  }
+  .shared_style .images {
+    text-align: center;
+  }
+}
+
+/* /lateral, cut, accesories */
+
+
+/* HOME */
+#home p {
+  padding: 4rem;
+}
+@media screen and (max-width: 700px) {
+  #home p {
+    padding: 2rem;
+  }
+}
+
+
+
+/* /HOME */
+
+
+/* PUMPS */
+#products {
+  position: relative;
+}
+#pumps .nav {
+  padding: 1rem 1rem 4rem;
+  color: red;
+  text-align: right;
+}
+#pumps .nav button {
+  background: none;
+  color: white;
+  border: 0;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+#pumps .nav button:hover, #pumps .nav button:focus {
+  color: red;
+}
+.product {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  display: grid;
+  grid-template-areas: 'title title' 'text images';
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: min-content 1fr;
+  grid-gap: 1rem;
+}
+.product:first-child {
+  position: static;
+}
+.product.current {
+  opacity: 1;
+}
+.product h2 {
+  grid-area: title;
+}
+.product p {
+  grid-area: text;
+  padding: 2rem;
+}
+.product .images {
+  grid-area: images;
+}
+.product .images img {
+  width: 100%;
+}
+@media screen and (max-width: 600px) {
+  #pumps .nav {
+    text-align: center;
+  }
+  .product {
+    display: block;
+  }
+  .product .images {
+    float: right;
+    width: 200px;
+    max-width: 40vw;
+    margin-left: .5rem;
+  }
+  .product .images img {
+    width: 200px;
+    max-width: 40vw;
+  }
+}
+
+/* /PUMPS */
+
+
+
+/* OPTIONALS */
+#optionals p {
+  padding: 7rem;
+}
+@media screen and (max-width: 600px) {
+  #optionals p {
+    padding: 4rem;
+  }
+}
+
+
+/* /OPTIONALS */
