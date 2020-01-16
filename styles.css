@@ -94,6 +94,7 @@ h1 {
 footer {
   color: #888;
   padding: .5rem;
+  padding-top: 25vh;
 }
 footer #copyright {
   float: right;
@@ -120,6 +121,9 @@ section, nav {
   }
   h1, h2 {
     text-align: center;
+  }
+  footer {
+    padding-top: .5rem;
   }
 }
 
